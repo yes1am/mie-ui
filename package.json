@@ -16,7 +16,8 @@
     "storybook": "start-storybook -p 6006",
     "build:docs": "build-storybook",
     "lint": "eslint --ext .tsx,.ts,.js,.jsx components/**",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "change-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "files": [
     "components",
@@ -61,6 +62,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "autoprefixer": "9.0",
     "babel-loader": "^8.2.2",
+    "conventional-changelog-cli": "^2.1.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.24.0",

@@ -11,7 +11,7 @@ yarn add @songjp/mie-ui
 ```
 
 **使用方式:**  
-目前打包除了 es 目录(esm 模块)， lib 目录(cjs 模块) 以及 dist 目录(umd) 模块。
+目前打包出了 es 目录(esm 模块)， lib 目录(cjs 模块) 以及 dist 目录(umd) 模块。
 
 ```shell
 // 方式1: import
@@ -23,6 +23,8 @@ import { Avatar } from '@songjp/mie-ui'
 // 方式2: UMD
 <script src="node_modules/react/umd/react.development.js"></script>
 <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/@songjp/mit-ui/dist/mie-ui.js"></script>
+<link href="node_modules/@songjp/mit-ui/dist/mie-ui.css" rel="stylesheet" />
 <script>
   ReactDOM.render(
       React.createElement(miemie.tooltip, {
@@ -33,4 +35,17 @@ import { Avatar } from '@songjp/mie-ui'
     ), document.querySelector('#root')
   )
 </script>
+```
+
+## 2. 发布
+
+```shell
+# 打 tag
+npm version patch/minor/maior
+
+# 推代码
+git push
+
+# 推 tag 触发 CI 执行发布
+git push origin --tags
 ```
