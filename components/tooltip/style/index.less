@@ -1,0 +1,36 @@
+.mie-ui-tooltip {
+  position: fixed;
+  top: -40px;
+  padding: 4px 8px;
+  z-index: 100002;
+  font-size: 12px;
+  line-height: 14px;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: rgba(51,51,51, 0.8);
+  color: white;
+  min-width: 20px;
+  text-align: center;
+  /* 箭头 */
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    line-height: 0;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: rgba(51,51,51, 0.8);
+    transform: translateX(-50%);
+  }
+  &-left:after {
+    left: 14px;
+    transform: translateX(0);
+  }
+  &-right:after {
+    right: 14px;
+    left: auto;
+    transform: translateX(0);
+  }
+}
